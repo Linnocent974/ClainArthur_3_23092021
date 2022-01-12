@@ -2,72 +2,56 @@
 @use "../utils/colors.scss";
 @use "../utils/mixins.scss";
 
-.menus {
-  background-color: #f6f6f6;
-  margin-bottom: 2rem;
+#homepage {
+  .menus {
+    background-color: #f6f6f6;
+    margin-bottom: 2rem;
 
-  .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    @media (max-width: variables.$breakpoint) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .new{
-      position: relative;
-    }
-    .new::before {
-      content: "Nouveau";
-      position: absolute;
-      height: 2rem;
-      width: 5rem;
-      background-color: colors.$color-tertiary;
-      color: darken(colors.$color-tertiary, 50%);
+    .menus__cards {
       display: grid;
-      place-items: center;
-      right: 1rem;
-      top: 1rem;
-    }
-  }
-
-  .card {
-    &__image {
-      height: 15rem;
-      background-size: cover;
-      border-radius: 1rem 1rem 0 0;
-    }
-    @for $i from 1 through 4 {
-      &__image-#{$i} {
-        background-image: url(../../assets/menu-#{$i}.jpg);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      @media (max-width: variables.$breakpoint) {
+        grid-template-columns: repeat(1, 1fr);
       }
-    }
-    &__description {
-      position: relative;
-      background-color: white;
-      border-radius: 0 0 1rem 1rem;
-
-      h3,
-      p {
-        margin: 0.3rem;
+      .new {
+        position: relative;
       }
-      i {
-        font-size: 2rem;
+      .new::before {
+        content: "Nouveau";
         position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: colors.$color-tertiary;
+        color: darken(colors.$color-tertiary, 50%);
+        display: grid;
+        place-items: center;
         right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 1rem;
       }
-      .fas {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 200ms ease-in-out;
-        @include mixins.gradient(1);
+    }
+
+    .card {
+      &__image {
+        height: 15rem;
+        background-size: cover;
+        border-radius: 1rem 1rem 0 0;
       }
-      &:hover .fas {
-        opacity: 1;
-        transform: translateY(-50%) scale(1.2);
+      @for $i from 1 through 4 {
+        &__image-#{$i} {
+          background-image: url(../../assets/menu-#{$i}.jpg);
+        }
+      }
+      &__description {
+        @include mixins.heart-animated;
+        h3,
+        p {
+          margin: 0.3rem;
+        }
+        &:hover .fas {
+          opacity: 1;
+          transform: translateY(-50%) scale(1.2);
+        }
       }
     }
   }
