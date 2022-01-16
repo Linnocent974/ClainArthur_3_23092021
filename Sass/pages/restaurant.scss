@@ -50,11 +50,11 @@ body {
   .menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    background-color: colors.$lightergrey;
     @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
     }
+    gap: 1rem;
+    background-color: colors.$lightergrey;
     h3 {
       text-transform: uppercase;
       font-weight: 400;
@@ -118,7 +118,7 @@ body {
           width: $button-width;
           transition: margin-right 0.5s;
           i {
-            $size: 1rem;
+            $size: 2rem;
             display: grid;
             place-items: center;
             background: white;

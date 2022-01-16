@@ -144,6 +144,8 @@ header {
 }
 .tuto li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -168,6 +170,10 @@ header {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto li i.fas {
   margin-right: 1rem;
@@ -460,8 +466,8 @@ body {
   display: grid;
   place-items: center;
   background: white;
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 1rem;
   color: #99E2D0;
 }
