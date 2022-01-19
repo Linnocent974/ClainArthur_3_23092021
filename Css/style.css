@@ -47,13 +47,14 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: #f3f3f3;
+  background-color: #d3d3d3;
   text-align: center;
   padding: 0.5rem;
 }
 .city i,
 .city h2 {
-  font-size: 1.5rem;
+  font-size: 16px;
+  color: #808080;
 }
 
 @keyframes appear {
@@ -68,7 +69,7 @@ header {
 }
 .explorer {
   text-align: center;
-  margin: 3rem;
+  margin: 2rem;
 }
 .explorer h2 {
   margin-top: 1.5rem;
@@ -211,8 +212,9 @@ header {
 }
 #homepage .menus .card__image {
   height: 15rem;
-  background-size: cover;
   border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+  background-position: center;
 }
 #homepage .menus .card__image-1 {
   background-image: url(../../assets/menu-1.jpg);
@@ -323,7 +325,7 @@ body {
   width: 100%;
   height: 70vh;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center;
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -389,8 +391,6 @@ body {
   background-color: #f6f6f6;
 }
 #page-resto .menus {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background-color: #f6f6f6;
 }
