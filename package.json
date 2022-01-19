@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch Sass/main.scss Css/style.css"
+    "sass": "sass --watch Sass/main.scss Css/style.css",
+    "build": "postcss ./Css/style.css -u autoprefixer cssnano -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/Linnocent974/Oh-my-Food#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.15",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.46.0"
   }
 }
