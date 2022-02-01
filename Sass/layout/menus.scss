@@ -41,6 +41,7 @@
       @for $i from 1 through 4 {
         &__image-#{$i} {
           background-image: url(../assets/menu-#{$i}.jpg);
+          margin-top: 0.8rem;
         }
       }
       &__description {
